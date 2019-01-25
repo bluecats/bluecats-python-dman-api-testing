@@ -1,8 +1,8 @@
-# get_test.tavern.yaml
+# test_GET_devices.tavern.yaml
 
 ---
 
-test_name: Get Devices List
+test_name: Get a list of Devices 
 
 stages:
   - name: Make sure number is returned correctly
@@ -11,5 +11,7 @@ stages:
       method: GET
       headers:
         content-type: application/json
+        auth: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        version: "3"
     response:
-      status_code: 200
+      status_code: 401
