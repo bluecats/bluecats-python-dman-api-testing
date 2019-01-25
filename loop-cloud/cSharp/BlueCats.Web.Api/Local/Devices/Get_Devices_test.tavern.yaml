@@ -1,0 +1,15 @@
+# get_test.tavern.yaml
+
+---
+
+test_name: Get Devices List
+
+stages:
+  - name: Make sure number is returned correctly
+    request:
+      url: http://localhost:65069/devices
+      method: GET
+      headers:
+        content-type: application/json
+    response:
+      status_code: 200
