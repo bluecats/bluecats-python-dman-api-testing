@@ -7,7 +7,7 @@ test_name: GET Device Original
 stages:
   - name: Get the original device, based on the device id, on a local server.
     request:
-      url: http://localhost:65069/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
       method: GET
       headers:
         content-type: application/json
@@ -25,7 +25,7 @@ test_name: PATCH Device Original
 stages:
   - name: Patch a single device, based on the device id, on a local server.
     request:
-      url: http://localhost:65069/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
       method: PATCH
       headers:
         content-type: application/json
@@ -46,7 +46,7 @@ test_name: PATCH Device Confirm
 stages:
   - name: Confirm the device patch worked, based on the device id, on a local server.
     request:
-      url: http://localhost:65069/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
       method: GET
       headers:
         content-type: application/json
@@ -64,7 +64,7 @@ test_name: PATCH Device Restore
 stages:
   - name: Restore the device with a patch to it original state, based on the device id, on a local server.
     request:
-      url: http://localhost:65069/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
       method: PATCH
       headers:
         content-type: application/json
@@ -85,7 +85,7 @@ test_name: GET Device Confirm
 stages:
   - name: Confirm the device's restore patch worked, based on the device id, on a local server.
     request:
-      url: http://localhost:65069/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
       method: GET
       headers:
         content-type: application/json
