@@ -2,16 +2,16 @@
 
 ---
 
-test_name: Get a list of Devices 
+test_name: Get Devices 
 
 stages:
-  - name: Make sure number is returned correctly
+  - name: Get a list of devices.
     request:
       url: http://localhost:65069/devices
       method: GET
       headers:
         content-type: application/json
-        auth: "BlueCats {tavern.env_vars.SECRET_AUTH}"
-        version: "3"
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
     response:
-      status_code: 401
+      status_code: 200
