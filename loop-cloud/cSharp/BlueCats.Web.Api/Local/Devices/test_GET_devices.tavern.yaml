@@ -1,0 +1,17 @@
+# test_GET_devices.tavern.yaml
+
+---
+
+test_name: GET Devices 
+
+stages:
+  - name: Get a list of devices on a local server.
+    request:
+      url: http://localhost:65069/devices
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
