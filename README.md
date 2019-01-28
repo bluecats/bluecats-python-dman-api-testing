@@ -20,3 +20,10 @@ Setting Environmental Variables:
 Linux CLI:
 
 $ export SECRET_AUTH="base64 token"
+
+Pytest Automation Libraries - Local Development:
+
+1.) Pytest-Watch
+    - https://github.com/joeyespo/pytest-watch
+2.) Pytest-XDist
+    - https://pypi.org/project/pytest-xdist/
