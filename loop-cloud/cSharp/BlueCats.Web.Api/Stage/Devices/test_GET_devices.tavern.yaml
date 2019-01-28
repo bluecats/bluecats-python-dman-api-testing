@@ -5,9 +5,9 @@
 test_name: Get Devices 
 
 stages:
-  - name: Get a list of devices on a local server.
+  - name: Get a list of devices on the stage server.
     request:
-      url: http://localhost:65069/devices
+      url: https://api-stage.apps.bluecats.com/devices
       method: GET
       headers:
         content-type: application/json

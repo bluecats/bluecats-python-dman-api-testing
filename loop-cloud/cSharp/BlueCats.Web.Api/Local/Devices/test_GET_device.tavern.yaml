@@ -5,9 +5,9 @@
 test_name: Get Devices 
 
 stages:
-  - name: Get a list of devices on a local server.
+  - name: Get a single device, based on a Mac Address, on a local server.
     request:
-      url: http://localhost:65069/devices
+      url: http://localhost:65069/devices/E4956E40D05E
       method: GET
       headers:
         content-type: application/json
