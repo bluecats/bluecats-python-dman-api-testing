@@ -1,0 +1,101 @@
+# test_GET_devices.tavern.yaml
+
+---
+
+test_name: GET Device Original
+
+stages:
+  - name: Get the original device, based on the device id, on a local server.
+    request:
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: "Zach's Dev Edge"
+          notes: ""
+
+test_name: PATCH Device Original
+
+stages:
+  - name: Patch a single device, based on the device id, on a local server.
+    request:
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      method: PATCH
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json:
+        name: "Test Dev Edge"
+        notes: "Testing a PATCH"
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: "Test Dev Edge"
+          notes: "Testing a PATCH"
+
+test_name: PATCH Device Confirm
+
+stages:
+  - name: Confirm the device patch worked, based on the device id, on a local server.
+    request:
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: "Test Dev Edge"
+          notes: "Testing a PATCH" 
+
+test_name: PATCH Device Restore
+
+stages:
+  - name: Restore the device with a patch to it original state, based on the device id, on a local server.
+    request:
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      method: PATCH
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json:
+        name: "Zach's Dev Edge"
+        notes: ""
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: "Zach's Dev Edge"
+          notes: ""
+
+test_name: GET Device Confirm
+
+stages:
+  - name: Confirm the device's restore patch worked, based on the device id, on a local server.
+    request:
+      url: https://api-stage.apps.bluecats.com/devices/e9bf6f01-d0a6-e2aa-e247-9e355d47fb87
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: "Zach's Dev Edge"
+          notes: ""
+      
+      

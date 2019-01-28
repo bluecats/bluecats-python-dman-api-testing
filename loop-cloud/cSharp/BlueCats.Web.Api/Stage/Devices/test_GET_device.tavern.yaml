@@ -1,0 +1,17 @@
+# test_GET_devices.tavern.yaml
+
+---
+
+test_name: GET Device
+
+stages:
+  - name: Get a single device, based on a Mac Address, on the stage server.
+    request:
+      url: https://api-stage.apps.bluecats.com/devices/E4956E40D05E
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
