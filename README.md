@@ -17,7 +17,7 @@ Testing Authorization:
 
 Setting Environmental Variables:
 
-Linux CLI:
+MAC CLI:
 
 $ export SECRET_AUTH="base64(appToken:username:password)"
 
