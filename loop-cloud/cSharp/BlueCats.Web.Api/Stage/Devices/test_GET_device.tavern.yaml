@@ -2,7 +2,7 @@
 
 ---
 
-test_name: Get Devices 
+test_name: GET Device
 
 stages:
   - name: Get a single device, based on a Mac Address, on the stage server.

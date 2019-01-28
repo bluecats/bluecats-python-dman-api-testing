@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\loop-cloud",
+    "\\loop-cloud\\cSharp",
+    "\\loop-cloud\\cSharp\\BlueCats.Web.Api",
+    "\\loop-cloud\\cSharp\\BlueCats.Web.Api\\Local",
+    "\\loop-cloud\\cSharp\\BlueCats.Web.Api\\Local\\Devices"
+  ],
+  "SelectedNode": "\\loop-cloud\\cSharp\\BlueCats.Web.Api\\Local\\Devices\\test_PATCH_device.tavern.yaml",
+  "PreviewInSolutionExplorer": false
+}

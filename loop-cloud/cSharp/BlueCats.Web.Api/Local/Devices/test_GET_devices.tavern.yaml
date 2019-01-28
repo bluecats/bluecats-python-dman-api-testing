@@ -2,7 +2,7 @@
 
 ---
 
-test_name: Get Devices 
+test_name: GET Devices 
 
 stages:
   - name: Get a list of devices on a local server.
