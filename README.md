@@ -19,7 +19,7 @@ Setting Environmental Variables:
 
 Linux CLI:
 
-$ export SECRET_AUTH="base64 token"
+$ export SECRET_AUTH="base64(appToken:username:password)"
 
 Pytest Automation Libraries - Local Development:
 
