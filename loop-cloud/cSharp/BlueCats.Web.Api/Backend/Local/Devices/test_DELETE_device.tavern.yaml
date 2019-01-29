@@ -2,7 +2,7 @@
 
 ---
 
-test_name: GET Device Confirm
+test_name: DELETE Device 
 
 marks:
   - delete
@@ -19,13 +19,7 @@ stages:
         x-api-version: "3"
     response:
       status_code: 200
-
-test_name: DELETE Device 
-
-marks:
-  - delete
-
-stages:
+      
   - name: Delete the posted device, based on a Mac Address, on a local server.
     request:
       url: http://localhost:65069/devices/17700b5234373535534252777d205456

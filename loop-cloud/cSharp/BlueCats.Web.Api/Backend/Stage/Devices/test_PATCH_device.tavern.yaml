@@ -2,7 +2,7 @@
 
 ---
 
-test_name: GET Device Original
+test_name: PATCH Device
 
 marks:
   - patch
@@ -23,12 +23,6 @@ stages:
         device:
           name: "ConferenceRoom"
 
-test_name: PATCH Device Original
-
-marks:
-  - patch
-
-stages:
   - name: Patch a single device, based on the device id, on the stage server.
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
@@ -45,12 +39,6 @@ stages:
         device:
           name: "Test Dev Edge"
 
-test_name: PATCH Device Confirm
-
-marks:
-  - patch
-
-stages:
   - name: Confirm the device patch worked, based on the device id, on the stage server.
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
@@ -65,12 +53,6 @@ stages:
         device:
           name: "Test Dev Edge"
 
-test_name: PATCH Device Restore
-
-marks:
-  - patch
-
-stages:
   - name: Restore the device with a patch to it original state, based on the device id, on the stage server.
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
@@ -87,12 +69,6 @@ stages:
         device:
           name: "ConferenceRoom"
 
-test_name: GET Device Confirm
-
-marks:
-  - patch
-
-stages:
   - name: Confirm the device's restore patch worked, based on the device id, on the stage server.
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
