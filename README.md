@@ -23,6 +23,8 @@ $ export SECRET_AUTH="base64(appToken:username:password)"
 
 Pytest Automation Libraries - Local Development:
 
+** Please Note: Automation tools may run test in parrallel with multi-processors causing false positives & vice versa test results to occur. **
+
 1.) Pytest-Watch
     - https://github.com/joeyespo/pytest-watch
 2.) Pytest-XDist

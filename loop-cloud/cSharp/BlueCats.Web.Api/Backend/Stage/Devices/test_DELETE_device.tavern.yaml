@@ -1,0 +1,34 @@
+# test_DELETE_device.tavern.yaml
+
+---
+
+test_name: GET Device Confirm
+
+stages:
+  - name: Confirm the posted device, based on a Mac Address, on the stage server.
+    request:
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205457
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+
+test_name: DELETE Device 
+
+stages:
+  - name: Delete the posted device, based on a Mac Address, on the stage server.
+    request:
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205457
+      method: DELETE
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 204
+
+
+

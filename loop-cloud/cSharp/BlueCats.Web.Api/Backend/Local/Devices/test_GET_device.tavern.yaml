@@ -1,4 +1,4 @@
-# test_GET_devices.tavern.yaml
+# test_GET_device.tavern.yaml
 
 ---
 
@@ -7,7 +7,7 @@ test_name: GET Device
 stages:
   - name: Get a single device, based on a Mac Address, on a local server.
     request:
-      url: http://localhost:65069/devices/E4956E40D05E
+      url: http://localhost:65069/devices/E4956E40DFB0
       method: GET
       headers:
         content-type: application/json
