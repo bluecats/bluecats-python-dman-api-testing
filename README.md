@@ -43,3 +43,4 @@ $ export SECRET_AUTH="base64(appToken:username:password)"
     - https://github.com/joeyespo/pytest-watch
 2.) Pytest-XDist
     - https://pypi.org/project/pytest-xdist/
+    
