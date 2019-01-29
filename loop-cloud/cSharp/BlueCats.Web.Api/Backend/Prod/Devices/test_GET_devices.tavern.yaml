@@ -4,8 +4,12 @@
 
 test_name: GET Devices 
 
+marks:
+  - get
+
 stages:
   - name: Get a list of devices on the production server.
+    skip: False
     request:
       url: https://api.bluecats.com/devices
       method: GET

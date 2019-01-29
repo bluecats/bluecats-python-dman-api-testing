@@ -6,6 +6,7 @@ test_name: GET Device Original
 
 stages:
   - name: Get the original device, based on the device id, on the stage server.
+    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: GET
@@ -23,6 +24,7 @@ test_name: PATCH Device Original
 
 stages:
   - name: Patch a single device, based on the device id, on the stage server.
+    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: PATCH
@@ -42,6 +44,7 @@ test_name: PATCH Device Confirm
 
 stages:
   - name: Confirm the device patch worked, based on the device id, on the stage server.
+    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: GET
@@ -59,6 +62,7 @@ test_name: PATCH Device Restore
 
 stages:
   - name: Restore the device with a patch to it original state, based on the device id, on the stage server.
+    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: PATCH
@@ -78,6 +82,7 @@ test_name: GET Device Confirm
 
 stages:
   - name: Confirm the device's restore patch worked, based on the device id, on the stage server.
+    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: GET

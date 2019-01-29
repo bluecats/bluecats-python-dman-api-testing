@@ -6,6 +6,7 @@ test_name: GET Device
 
 stages:
   - name: Get a single device, based on a Mac Address, on a local server.
+    skip: True
     request:
       url: http://localhost:65069/devices/E4956E40DFB0
       method: GET

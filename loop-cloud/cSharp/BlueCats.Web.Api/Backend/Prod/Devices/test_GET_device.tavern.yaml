@@ -6,6 +6,7 @@ test_name: GET Devices
 
 stages:
   - name: Get a single device, based on a Mac Address, on the production server.
+    skip: false
     request:
       url: https://api.bluecats.com/devices/E4956E40D05E
       method: GET

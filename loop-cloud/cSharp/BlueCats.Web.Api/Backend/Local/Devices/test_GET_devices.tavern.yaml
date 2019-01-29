@@ -6,6 +6,7 @@ test_name: GET Devices
 
 stages:
   - name: Get a list of devices on a local server.
+    skip: True
     request:
       url: http://localhost:65069/devices
       method: GET

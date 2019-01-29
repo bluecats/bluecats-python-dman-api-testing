@@ -6,6 +6,7 @@ test_name: GET Devices
 
 stages:
   - name: Get a list of devices on the stage server.
+    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices
       method: GET
