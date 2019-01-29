@@ -4,6 +4,9 @@
 
 test_name: GET Device Original
 
+marks:
+  - patch
+
 stages:
   - name: Get the original device, based on the device id, on the stage server.
     skip: True
@@ -21,6 +24,9 @@ stages:
           name: "ConferenceRoom"
 
 test_name: PATCH Device Original
+
+marks:
+  - patch
 
 stages:
   - name: Patch a single device, based on the device id, on the stage server.
@@ -42,6 +48,9 @@ stages:
 
 test_name: PATCH Device Confirm
 
+marks:
+  - patch
+
 stages:
   - name: Confirm the device patch worked, based on the device id, on the stage server.
     skip: True
@@ -59,6 +68,9 @@ stages:
           name: "Test Dev Edge"
 
 test_name: PATCH Device Restore
+
+marks:
+  - patch
 
 stages:
   - name: Restore the device with a patch to it original state, based on the device id, on the stage server.
@@ -79,6 +91,9 @@ stages:
           name: "ConferenceRoom"
 
 test_name: GET Device Confirm
+
+marks:
+  - patch
 
 stages:
   - name: Confirm the device's restore patch worked, based on the device id, on the stage server.

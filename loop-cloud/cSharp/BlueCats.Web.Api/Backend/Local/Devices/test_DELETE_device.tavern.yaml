@@ -4,6 +4,9 @@
 
 test_name: GET Device Confirm
 
+marks:
+  - delete
+
 stages:
   - name: Confirm the posted device, based on a Mac Address, on a local server.
     skip: True
@@ -18,6 +21,9 @@ stages:
       status_code: 200
 
 test_name: DELETE Device 
+
+marks:
+  - delete
 
 stages:
   - name: Delete the posted device, based on a Mac Address, on a local server.

@@ -3,6 +3,9 @@
 ---
 test_name: GET Device Confirm
 
+marks:
+  - post
+
 stages:
   - name: Confirm the device doesn't already exist, based on the device MAC Address, on a local server.
     skip: True
@@ -18,6 +21,9 @@ stages:
 
 
 test_name: POST Device Original
+
+marks:
+  - post
 
 stages:
   - name: Post a single device, based on the device json object, on a local server.
