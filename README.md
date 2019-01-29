@@ -44,12 +44,6 @@ $ export SECRET_AUTH="base64(appToken:username:password)"
 
 *** Please Note: Automation tools may run test in parrallel with multi-processors causing false positives & vice versa test results to occur. ***
 
-<<<<<<< HEAD
--   Pytest-Watch: https://github.com/joeyespo/pytest-watch
--   Pytest-XDist: https://pypi.org/project/pytest-xdist/
-
-=======
 
 -   Pytest-Watch: https://github.com/joeyespo/pytest-watch
 -   Pytest-XDist: https://pypi.org/project/pytest-xdist/
->>>>>>> 88238426d3b7537ce3a9577260e68adcec69ca8c
