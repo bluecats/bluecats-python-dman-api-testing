@@ -1,4 +1,4 @@
-# test_PATCH_device.tavern.yaml
+# test_CRUD_device.tavern.yaml
 
 ---
 
@@ -30,7 +30,6 @@ marks:
 
 stages:
   - name: Patch a single device, based on the device id, on the stage server.
-    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: PATCH
@@ -53,7 +52,6 @@ marks:
 
 stages:
   - name: Confirm the device patch worked, based on the device id, on the stage server.
-    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: GET
@@ -74,7 +72,6 @@ marks:
 
 stages:
   - name: Restore the device with a patch to it original state, based on the device id, on the stage server.
-    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: PATCH
@@ -97,7 +94,6 @@ marks:
 
 stages:
   - name: Confirm the device's restore patch worked, based on the device id, on the stage server.
-    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: GET

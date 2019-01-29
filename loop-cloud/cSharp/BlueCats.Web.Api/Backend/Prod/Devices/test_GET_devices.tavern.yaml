@@ -9,7 +9,7 @@ marks:
 
 stages:
   - name: Get a list of devices on the production server.
-    skip: False
+    skip: True
     request:
       url: https://api.bluecats.com/devices
       method: GET

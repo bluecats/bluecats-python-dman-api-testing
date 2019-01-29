@@ -1,4 +1,4 @@
-# test_PATCH_device.tavern.yaml
+# test_POST_device.tavern.yaml
 
 ---
 test_name: GET Device Confirm
@@ -27,7 +27,6 @@ marks:
 
 stages:
   - name: Post a single device, based on the device json object, on a local server.
-    skip: True
     request:
       url: http://localhost:65069/devices
       method: POST
