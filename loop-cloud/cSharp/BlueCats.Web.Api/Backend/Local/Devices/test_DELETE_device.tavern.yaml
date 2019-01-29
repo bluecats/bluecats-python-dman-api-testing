@@ -27,7 +27,6 @@ marks:
 
 stages:
   - name: Delete the posted device, based on a Mac Address, on a local server.
-    skip: True
     request:
       url: http://localhost:65069/devices/17700b5234373535534252777d205456
       method: DELETE
