@@ -11,6 +11,11 @@ What this library does not test:
      1.) Unit Testing
      2.) Integration Testing
 
+** Installation **
+
+-  pip install pytest
+-  pip install pytest-xdist
+
 *Instructions*
 
 **Testing Authorization:**
