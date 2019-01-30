@@ -8,9 +8,11 @@ marks:
 
 stages:
   - name: GET Device - No Device Fail
-    skip: False
+    skip: True
     request:
-      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -22,6 +24,8 @@ stages:
   - name: POST Device - New Device Succeed
     request:
       url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: POST
       headers:
         content-type: application/json
@@ -59,7 +63,9 @@ stages:
 
   - name: GET Device - Verify New Device
     request:
-      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -85,7 +91,9 @@ stages:
 
   - name: PATCH Device - Updated New Device
     request:
-      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: PATCH
       headers:
         content-type: application/json
@@ -101,7 +109,9 @@ stages:
 
   - name: GET Device - Verify Updated Device
     request:
-      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -115,7 +125,9 @@ stages:
   
   - name: PATCH Device - Reverse Device Update
     request:
-      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: PATCH
       headers:
         content-type: application/json
@@ -131,7 +143,9 @@ stages:
 
   - name: GET Device - Verify Reversed Update
     request:
-      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -145,7 +159,9 @@ stages:
 
   - name: DELETE - Delete Patched Device
     request:
-      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: DELETE
       headers:
         content-type: application/json
@@ -156,7 +172,9 @@ stages:
 
   - name: GET Device - Verify Device Deletion
     request:
-      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      url: http://localhost:65069/devices/
+      params:
+        identifier: 17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
