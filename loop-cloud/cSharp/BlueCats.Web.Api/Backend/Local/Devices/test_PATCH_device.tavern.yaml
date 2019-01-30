@@ -2,7 +2,7 @@
 
 ---
 
-test_name: GET Device Original
+test_name: PATCH Device
 
 marks:
   - patch
@@ -11,7 +11,7 @@ stages:
   - name: Get the original device, based on the device id, on a local server.
     skip: True
     request:
-      url: http://localhost:65069/devices/10746901-f7a6-aea0-ac49-67304b51bd17
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -19,19 +19,10 @@ stages:
         x-api-version: "3"
     response:
       status_code: 200
-      body: 
-        device:
-          name: "ConferenceRoom"
 
-test_name: PATCH Device Original
-
-marks:
-  - patch
-
-stages:
   - name: Patch a single device, based on the device id, on a local server.
     request:
-      url: http://localhost:65069/devices/10746901-f7a6-aea0-ac49-67304b51bd17
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
       method: PATCH
       headers:
         content-type: application/json
@@ -45,15 +36,9 @@ stages:
         device:
           name: "Test Dev Edge"
 
-test_name: PATCH Device Confirm
-
-marks:
-  - patch
-
-stages:
   - name: Confirm the device patch worked, based on the device id, on a local server.
     request:
-      url: http://localhost:65069/devices/10746901-f7a6-aea0-ac49-67304b51bd17
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -65,46 +50,24 @@ stages:
         device:
           name: "Test Dev Edge"
 
-test_name: PATCH Device Restore
-
-marks:
-  - patch
-
-stages:
   - name: Restore the device with a patch to it original state, based on the device id, on a local server.
     request:
-      url: http://localhost:65069/devices/10746901-f7a6-aea0-ac49-67304b51bd17
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
       method: PATCH
       headers:
         content-type: application/json
         Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
         x-api-version: "3"
       json:
-        name: "ConferenceRoom"
+        name: ""
     response:
       status_code: 200
       body: 
         device:
-          name: "ConferenceRoom"
+          name: ""
 
-test_name: GET Device Confirm
 
-marks:
-  - patch
 
-stages:
-  - name: Confirm the device's restore patch worked, based on the device id, on a local server.
-    request:
-      url: http://localhost:65069/devices/10746901-f7a6-aea0-ac49-67304b51bd17
-      method: GET
-      headers:
-        content-type: application/json
-        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
-        x-api-version: "3"
-    response:
-      status_code: 200
-      body: 
-        device:
-          name: "ConferenceRoom"
+
       
       

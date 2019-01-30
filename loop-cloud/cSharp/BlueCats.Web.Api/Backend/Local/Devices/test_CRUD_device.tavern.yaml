@@ -1,0 +1,197 @@
+# test_CRUD_device.tavern.yaml
+
+---
+test_name: Device CRUD Test
+
+marks:
+  - crud
+
+stages:
+  - name: GET Device - No Device Fail
+    skip: False
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+  - name: POST Device - New Device Succeed
+    request:
+      url: http://localhost:65069/devices/
+      method: POST
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json:
+        macAddress: "17700b5234373535534252777d205454"
+        serialNumber: "17700b5234373535534252777d205454"
+        deviceModelVariant:
+          deviceModelID: f01d1601-9da6-e2b1-b444-3e722fda4212
+        rfModuleInfo:
+          rfModule:
+            id: "e187b5b1-c61d-e911-b2fb-0e1e0e0c0534"
+        team:
+          id: "bc300500-85a2-31b1-e74f-333236827887"
+        site:
+          id: "f5dd3101-f4a2-7d90-f34b-f4dcc0c3ca46"
+    response:
+      status_code: 201
+      body: 
+        device:
+          macAddress: "17700b5234373535534252777d205454"
+          serialNumber: "17700b5234373535534252777d205454"
+          team:
+            id: "bc300500-85a2-31b1-e74f-333236827887"
+          site:
+            id: "f5dd3101-f4a2-7d90-f34b-f4dcc0c3ca46"
+          deviceModelVariant:
+            deviceModelID: f01d1601-9da6-e2b1-b444-3e722fda4212
+          rfModuleInfo:
+            rfModule:
+              id: "e187b5b1-c61d-e911-b2fb-0e1e0e0c0534"
+            macAddress: "17700b5234373535534252777d205454"
+            serialNumber: "17700b5234373535534252777d205454"
+
+  - name: GET Device - Verify New Device
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      body: 
+        device:
+          macAddress: "17700b5234373535534252777d205454"
+          serialNumber: "17700b5234373535534252777d205454"
+          team:
+            id: "bc300500-85a2-31b1-e74f-333236827887"
+          site:
+            id: "f5dd3101-f4a2-7d90-f34b-f4dcc0c3ca46"
+          deviceModelVariant:
+            deviceModelID: f01d1601-9da6-e2b1-b444-3e722fda4212
+          rfModuleInfo:
+            rfModule:
+              id: "e187b5b1-c61d-e911-b2fb-0e1e0e0c0534"
+            macAddress: "17700b5234373535534252777d205454"
+            serialNumber: "17700b5234373535534252777d205454"
+
+  - name: PATCH Device - Updated New Device
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      method: PATCH
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json:
+        name: "Test Dev Edge"
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: "Test Dev Edge"
+
+  - name: GET Device - Verify Updated Device
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: "Test Dev Edge"
+  
+  - name: PATCH Device - Reverse Device Update
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      method: PATCH
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json:
+        name: ""
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: ""
+
+  - name: GET Device - Verify Reversed Update
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      body: 
+        device:
+          name: ""
+
+  - name: DELETE - Delete Patched Device
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      method: DELETE
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 204
+
+  - name: GET Device - Verify Device Deletion
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205454
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+      
+
+        
+
+
+
+
+
+
+
+
+
+      
+
+
+      
+      
