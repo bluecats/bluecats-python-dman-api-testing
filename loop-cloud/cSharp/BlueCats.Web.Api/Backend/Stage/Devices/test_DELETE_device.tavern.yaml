@@ -6,10 +6,10 @@ test_name: DELETE Device
 
 marks:
   - delete
+  - skip
 
 stages:
   - name: Confirm the posted device, based on a Mac Address, on the stage server.
-    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205457
       method: GET

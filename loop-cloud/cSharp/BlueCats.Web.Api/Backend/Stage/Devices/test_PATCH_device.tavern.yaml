@@ -6,10 +6,10 @@ test_name: PATCH Device
 
 marks:
   - patch
+  - skip 
 
 stages:
   - name: Get the original device, based on the device id, on the stage server.
-    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/10746901-f7a6-aea0-ac49-67304b51bd17
       method: GET

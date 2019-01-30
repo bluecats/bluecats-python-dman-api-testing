@@ -5,15 +5,13 @@
 test_name: GET Device
 
 marks:
-  - get
+  - get 
 
 stages:
   - name: Get a single device, based on a Mac Address, on the stage server.
     skip: False
     request:
-      url: https://api-stage.apps.bluecats.com/devices
-      params:
-        identifier: E4956E40DFB0
+      url: "https://api-stage.apps.bluecats.com/devices/E4956E40DFB0"
       method: GET
       headers:
         content-type: application/json
