@@ -5,10 +5,10 @@ test_name: POST Device
 
 marks:
   - post
+  - skip
 
 stages:
   - name: Confirm the device doesn't already exist, based on the device MAC Address, on the stage server.
-    skip: True
     request:
       url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205457
       method: GET
