@@ -1,4 +1,4 @@
-# bluecats-dman-python-api-testing
+# bluecats-python-dman-api-testing
 Testing Library for BlueCats Device Management (DMAN) API
 
 This library involves the following forms of testing:
@@ -30,7 +30,7 @@ $ export SECRET_AUTH="base64(appToken:username:password)"
 
 ** Defaults: All tests in the library start off initially in the skip position (False), to turn on a test switch Skip to True **
 
--   Skip: False (Test of turned off)
+-   Skip: False (Test is turned off)
 -   Skip: True (Test is turned on)
 
 *** Pytest allows one to mark certain tests, such marks permit certain test to run tandum and exclude others: ***
