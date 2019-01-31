@@ -1,4 +1,4 @@
-# bluecats-dman-python-api-testing
+# bluecats-python-dman-api-testing
 Testing Library for BlueCats Device Management (DMAN) API
 
 This library involves the following forms of testing:
