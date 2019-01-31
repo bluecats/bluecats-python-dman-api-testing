@@ -1,5 +1,5 @@
-# bluecats-testing-library
-Testing Library for BlueCats Product Applications
+# bluecats-dman-python-api-testing
+Testing Library for BlueCats Device Management (DMAN) API
 
 This library involves the following forms of testing:
 
