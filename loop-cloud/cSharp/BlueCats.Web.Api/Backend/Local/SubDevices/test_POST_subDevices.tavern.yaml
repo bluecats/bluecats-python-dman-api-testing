@@ -1,0 +1,43 @@
+# test_POST_subDevices.tavern.yaml
+
+---
+test_name: POST Device
+
+includes:
+  - !include data.json
+
+marks:
+  - post
+
+stages:
+  - name: Confirm the device doesn't already exist, based on the device MAC Address, on a local server.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+  - name: Post a single device, based on the device json object, on a local server.
+    request:
+      url: http://localhost:65069/devices
+      method: POST
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json: !include data.json
+    response:
+      status_code: 201
+
+
+
+
+      
+
+
+      
+      

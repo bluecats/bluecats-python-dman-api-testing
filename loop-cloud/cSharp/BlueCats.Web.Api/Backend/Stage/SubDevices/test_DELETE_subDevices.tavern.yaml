@@ -6,7 +6,7 @@ test_name: DELETE Device
 
 marks:
   - delete
-  
+  - skip
 
 stages:
   - name: Confirm the posted device, based on a Mac Address, on the stage server.
