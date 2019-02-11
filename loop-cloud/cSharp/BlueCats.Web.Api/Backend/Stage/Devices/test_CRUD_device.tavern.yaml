@@ -5,6 +5,7 @@ test_name: Device CRUD Test
 
 marks:
   - crud
+  - skip
 
 stages:
   - name: GET Device - No Device Fail
