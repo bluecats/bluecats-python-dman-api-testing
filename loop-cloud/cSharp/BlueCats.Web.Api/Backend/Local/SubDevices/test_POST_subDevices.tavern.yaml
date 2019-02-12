@@ -1,7 +1,7 @@
 # test_POST_subDevices.tavern.yaml
 
 ---
-test_name: POST Device
+test_name: POST SubDevice(s)
 
 marks:
   - post

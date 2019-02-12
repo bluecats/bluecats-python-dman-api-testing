@@ -2,7 +2,7 @@
 
 ---
 
-test_name: GET SubDevices 
+test_name: GET SubDevice(s)
 
 marks:
   - get

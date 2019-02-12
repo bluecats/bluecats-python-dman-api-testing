@@ -2,14 +2,25 @@
 
 ---
 
-test_name: DELETE Device 
+test_name: DELETE SubDevice(s)
 
 marks:
   - delete
   - skip
 
 stages:
-  - name: Confirm the posted device, based on a Mac Address, on a local server.
+  - name: Confirm the existing Device, based on it's Mac Address, on a local server.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+
+  - name: Confirm the existing SubDevice(s), based on a Device's Mac Address, on a local server.
     request:
       url: http://localhost:65069/devices/57700b5234373535534252777d205451/subdevices
       method: GET
@@ -20,7 +31,7 @@ stages:
     response:
       status_code: 200
       
-  - name: Delete the posted device, based on a Mac Address, on a local server.
+  - name: Delete the posted Device and SubDevice's, based on a Device's Mac Address, on a local server.
     request:
       url: http://localhost:65069/devices/57700b5234373535534252777d205451
       method: DELETE
@@ -31,7 +42,7 @@ stages:
     response:
       status_code: 204
 
-  - name: Confirm the delete posted device, based on a Mac Address, on a local server.
+  - name: Confirm the delete Device, based on it's Mac Address, on a local server.
     request:
       url: http://localhost:65069/devices/57700b5234373535534252777d205451
       method: GET
@@ -42,7 +53,7 @@ stages:
     response:
       status_code: 404
 
-  - name: Confirm the delete posted subdevices, based on a Mac Address, on a local server.
+  - name: Confirm the deleted SubDevice(s), based on a Device's Mac Address, on a local server.
     request:
       url: http://localhost:65069/devices/57700b5234373535534252777d205451/subdevices
       method: GET
@@ -51,7 +62,7 @@ stages:
         Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
         x-api-version: "3"
     response:
-      status_code: 400
+      status_code: 404
 
 
 
