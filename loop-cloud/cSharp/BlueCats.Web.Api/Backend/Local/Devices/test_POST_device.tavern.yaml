@@ -31,7 +31,7 @@ stages:
         macAddress: "17700b5234373535534252777d205456"
         serialNumber: "17700b5234373535534252777d205456"
         deviceModelVariant:
-          deviceModelID: f01d1601-9da6-e2b1-b444-3e722fda4212
+          deviceModelID: "f01d1601-9da6-e2b1-b444-3e722fda4212"
         rfModuleInfo:
           rfModule:
             id: "e187b5b1-c61d-e911-b2fb-0e1e0e0c0534"

@@ -1,0 +1,48 @@
+# json_body.yaml
+
+---
+subDevices:
+- macAddress: 57700b5234373535534252777d205451
+  serialNumber: 77700b5234373535534252777d205452
+  rfModuleInfo:
+    rfModule:
+      id: 069a6b01-f7a6-9291-d848-a5956c3dda15
+  deviceModelVariant:
+    deviceModelID: afa60c01-0ea8-5f9d-914d-78911705a72e
+  deviceFirmware:
+    id: b1e61d00-1da7-4c94-e24e-6353c51d8809
+  deviceFirmwareStack:
+    id: aba70001-8ea8-86bc-0347-4204af331a60
+- macAddress: 57700b5234373535534252777d205451
+  serialNumber: 77700b5234373535534252777d205453
+  rfModuleInfo:
+    rfModule:
+      id: 069a6b01-f7a6-9291-d848-a5956c3dda15
+  deviceModelVariant:
+    deviceModelID: afa60c01-0ea8-5f9d-914d-78911705a72e
+  deviceFirmware:
+    id: b1e61d00-1da7-4c94-e24e-6353c51d8809
+  deviceFirmwareStack:
+    id: aba70001-8ea8-86bc-0347-4204af331a60
+- macAddress: 57700b5234373535534252777d205451
+  serialNumber: 77700b5234373535534252777d205454
+  rfModuleInfo:
+    rfModule:
+      id: 069a6b01-f7a6-9291-d848-a5956c3dda15
+  deviceModelVariant:
+    deviceModelID: afa60c01-0ea8-5f9d-914d-78911705a72e
+  deviceFirmware:
+    id: b1e61d00-1da7-4c94-e24e-6353c51d8809
+  deviceFirmwareStack:
+    id: aba70001-8ea8-86bc-0347-4204af331a60
+- macAddress: 57700b5234373535534252777d205451
+  serialNumber: 77700b5234373535534252777d205455
+  rfModuleInfo:
+    rfModule:
+      id: 069a6b01-f7a6-9291-d848-a5956c3dda15
+  deviceModelVariant:
+    deviceModelID: afa60c01-0ea8-5f9d-914d-78911705a72e
+  deviceFirmware:
+    id: b1e61d00-1da7-4c94-e24e-6353c51d8809
+  deviceFirmwareStack:
+    id: aba70001-8ea8-86bc-0347-4204af331a60
