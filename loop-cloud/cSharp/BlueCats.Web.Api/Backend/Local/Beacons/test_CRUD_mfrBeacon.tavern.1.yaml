@@ -1,0 +1,21 @@
+# test_CRUD_mfrbeacon.tavern.1.yaml
+
+---
+
+test_name: CRUD Mfr Beacon 1 - MfrBeaconsV1Controller
+
+marks:
+  - crud
+
+stages:
+  - name: Post, Get & Delete a mfr beacon with a JSON object running on a local server.
+    skip: True
+    request:
+      url: http://localhost:65069/mfr/beacons/{identifier}
+      method: POST
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

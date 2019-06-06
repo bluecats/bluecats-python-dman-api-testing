@@ -1,0 +1,21 @@
+# test_GET_beaconFirmware.tavern.4.yaml
+
+---
+
+test_name: GET Beacon Firmware 4 - BeaconFirmwareV3Controller
+
+marks:
+  - get
+
+stages:
+  - name: Return firmware OTA file by beacon identifier and firmware version on a local server.
+    skip: True
+    request:
+      url: http://localhost:65069/beacons/{identifier}/firmware/{version}/OTA
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

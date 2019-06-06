@@ -1,0 +1,21 @@
+# test_GET_mfrBeacon.tavern.1.yaml
+
+---
+
+test_name: GET Mfr Beacons 1 - MfrBeaconsV1Controller
+
+marks:
+  - get
+
+stages:
+  - name: Get a list all beacons from a running local server.
+    skip: True
+    request:
+      url: http://localhost:65069/mfr/beacons
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

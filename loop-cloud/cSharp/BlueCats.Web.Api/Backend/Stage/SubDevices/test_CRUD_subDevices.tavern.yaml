@@ -5,6 +5,7 @@ test_name: CRUD SubDevice(s)
 
 marks:
   - crud
+  - skip
 
 stages:
   - name: Confirm the device does already exist, based on the device MAC Address, on the staging server.
