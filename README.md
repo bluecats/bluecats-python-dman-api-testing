@@ -14,6 +14,7 @@ What this library does not test:
 ** Installation **
 
 -  pip install pytest
+-  pip install tavern
 -  pip install pytest-xdist
 
 *Instructions*
