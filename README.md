@@ -4,12 +4,12 @@ Testing Library for BlueCats Device Management (DMAN) API
 This library involves the following forms of testing:
 
     1.) Functional Testing (API)
-    2.) End-2-End (E2E) Testing (Frontend)
 
 What this library does not test:
 
      1.) Unit Testing
      2.) Integration Testing
+     3.) Front-end Testing
 
 ** Installation **
 
@@ -31,8 +31,8 @@ $ export SECRET_AUTH="base64(appToken:username:password)"
 
 ** Defaults: All tests in the library start off initially in the skip position (False), to turn on a test switch Skip to True **
 
--   Skip: False (Test is turned off)
--   Skip: True (Test is turned on)
+-   Skip: False (Test is turned on)
+-   Skip: True (Test is turned off)
 
 *** Pytest allows one to mark certain tests, such marks permit certain test to run tandum and exclude others: ***
 
