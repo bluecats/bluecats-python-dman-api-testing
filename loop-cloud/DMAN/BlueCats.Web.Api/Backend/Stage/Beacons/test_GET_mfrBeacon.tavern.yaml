@@ -2,16 +2,20 @@
 
 ---
 
-test_name: GET Mfr Beacons 1 - MfrBeaconsV1Controller
+test_name: GET Mfr Beacon 1 - MfrBeaconsV1Controller
 
 marks:
   - get
+  # - skip
+
+includes:
+- !include common.yaml
 
 stages:
-  - name: Get a list all beacons from a running local server.
+  - name: Get a mfr beacon by identifier running on a local server.
     skip: True
     request:
-      url: http://localhost:65069/mfr/beacons
+      url: https://stage.api.bluecats.com/mfr/beacons/{identifier1}
       method: GET
       headers:
         content-type: application/json

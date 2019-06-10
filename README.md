@@ -46,11 +46,14 @@ $ export SECRET_AUTH="base64(appToken:username:password)"
 -   POST Test Commands: $ pytest -m "post"
 -   PATCH Test Command: $ pytest -m "patch"
 -   Delete Test Commands: $ pytest -m "delete"
+-   CRUD Test Commands: $ pytest -m "crud"
 
 **Pytest Automation Libraries - Local Development:**
 
-*** Please Note: Automation tools may run test in parrallel with multi-processors causing false positives & vice versa test results to occur. ***
+*** Please Note: Automation & Report tools may run test in parrallel with multi-processors causing false positives & vice versa test results to occur. ***
 
 
--   Pytest-Watch: https://github.com/joeyespo/pytest-watch
--   Pytest-XDist: https://pypi.org/project/pytest-xdist/
+-   Pytest-Watch:    https://github.com/joeyespo/pytest-watch
+-   Pytest-XDist:    https://pypi.org/project/pytest-xdist/
+-   pystest-testmon: https://pypi.org/project/pytest-testmon/
+-   pytest-cov:      https://pypi.org/project/pytest-cov/
