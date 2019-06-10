@@ -5,6 +5,7 @@ test_name: CRUD SubDevice(s)
 
 marks:
   - crud
+  - skip
   
 
 stages:

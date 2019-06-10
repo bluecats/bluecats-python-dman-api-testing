@@ -7,14 +7,11 @@ test_name: GET Mfr Beacon 1 - MfrBeaconsV1Controller
 marks:
   - get
 
-includes:
-  - !include common.yaml
-
 stages:
   - name: Get a mfr beacon by identifier running on a local server.
-    skip: True
+    skip: False
     request:
-      url: http://localhost:65069/mfr/beacons/{identifier1}
+      url: http://localhost:65069/mfr/beacons/AC233F25AEE8
       method: GET
       headers:
         content-type: application/json

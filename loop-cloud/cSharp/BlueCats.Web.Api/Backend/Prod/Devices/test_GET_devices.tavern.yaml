@@ -6,6 +6,7 @@ test_name: GET Devices
 
 marks:
   - get
+  - skip
 
 stages:
   - name: Get a list of devices on the production server.

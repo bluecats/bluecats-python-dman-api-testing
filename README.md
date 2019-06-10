@@ -1,4 +1,5 @@
 # bluecats-python-dman-api-testing
+
 Testing Library for BlueCats Device Management (DMAN) API
 
 This library involves the following forms of testing:
@@ -18,6 +19,11 @@ What this library does not test:
 -  pip install pytest-xdist
 
 *Instructions*
+
+**Environment Settings**
+
+1.) pipenv install
+2.) pipenv shell
 
 **Testing Authorization:**
 

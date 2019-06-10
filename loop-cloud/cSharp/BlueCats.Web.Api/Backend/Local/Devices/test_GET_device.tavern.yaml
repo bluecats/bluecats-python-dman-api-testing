@@ -6,6 +6,7 @@ test_name: GET Device
 
 marks:
   - get
+  - skip
 
 stages:
   - name: Get a single device, based on a Mac Address, on a local server.
