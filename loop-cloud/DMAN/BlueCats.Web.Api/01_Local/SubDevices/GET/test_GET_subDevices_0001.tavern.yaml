@@ -1,0 +1,22 @@
+# test_GET_subDevices_0001.tavern.yaml
+
+---
+
+test_name: GET SubDevices Test - 0001 - DevicesV3Controller.cs (Local Environment)
+
+marks:
+  - get
+  - skip
+
+stages:
+  - name: Get a list of Subdevices from an existing Device.
+    skip: True
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451/subdevices
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

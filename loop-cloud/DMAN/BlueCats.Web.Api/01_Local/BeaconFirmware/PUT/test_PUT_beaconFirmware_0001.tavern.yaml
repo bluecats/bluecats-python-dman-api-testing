@@ -1,0 +1,22 @@
+# test_PUT_beaconFirmware_0001.tavern.yaml
+
+---
+
+test_name: PUT Beacon Version Confirmation Test - 0001 - BeaconFirmwareV3Controller.cs (Local Environment)
+
+marks:
+  - put
+  - skip
+
+stages:
+  - name: Return firmware OTA file by beacon identifier.
+    skip: True
+    request:
+      url: http://localhost:65069/beacons/{identifier}/firmware/{version}/Hex
+      method: PUT
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

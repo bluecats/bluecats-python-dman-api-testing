@@ -1,0 +1,22 @@
+# test_GET_devices.tavern.yaml
+
+---
+
+test_name: GET Device Test - 0002 - DevicesV3Controller.cs  (Production Environment)
+
+marks:
+  - get
+  - skip
+
+stages:
+  - name: Get a list of all avaliable devices.
+    skip: True
+    request:
+      url: https://api.bluecats.com/devices
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

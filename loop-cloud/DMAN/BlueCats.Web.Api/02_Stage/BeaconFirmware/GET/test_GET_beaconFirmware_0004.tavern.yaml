@@ -1,0 +1,22 @@
+# test_GET_beaconFirmware_0004.tavern.yaml
+
+---
+
+test_name: GET Beacon Firmware Test - 0004 - BeaconFirmwareV3Controller.cs (Stage Environment)
+
+marks:
+  - get
+  - skip
+
+stages:
+  - name: Return firmware OTA file by beacon identifier.
+    skip: True
+    request:
+      url: https://stage.api.bluecats.com/beacons/{identifier}/firmware/{version}/OTA
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

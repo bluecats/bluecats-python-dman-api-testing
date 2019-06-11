@@ -1,0 +1,22 @@
+# test_POST_mfrBeacons_0001.tavern.yaml
+
+---
+
+test_name: POST Mfr Beacons Test - 0001 - MfrBeaconsV1Controller.cs (Local Environment)
+
+marks:
+  - post
+  - skip
+
+stages:
+  - name: Post a mfr beacon with a JSON object based on a beacon identifier
+    skip: True
+    request:
+      url: http://localhost:65069/mfr/beacons/{identifier}
+      method: POST
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

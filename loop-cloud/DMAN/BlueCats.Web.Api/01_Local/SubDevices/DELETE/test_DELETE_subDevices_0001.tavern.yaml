@@ -1,0 +1,68 @@
+# test_DELETE_subDevices_0001.yaml
+
+---
+
+test_name: DELETE SubDevices Test - 0001 - DevicesV3Controller.cs (Local Environment)
+
+marks:
+  - delete
+  - skip
+
+stages:
+  - name: Confirm the existing Device based on it's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+
+  - name: Confirm the existing SubDevices based on its Device's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451/subdevices
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      
+  - name: Delete the posted Device and SubDevices based on a Device's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: DELETE
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 204
+
+  - name: Confirm the deleted Device based on it's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+  - name: Confirm the deleted SubDevices based on its Device's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451/subdevices
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+
+

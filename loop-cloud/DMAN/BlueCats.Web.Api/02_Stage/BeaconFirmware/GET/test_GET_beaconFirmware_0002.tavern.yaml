@@ -1,0 +1,22 @@
+# test_GET_beaconFirmware_0002.tavern.yaml
+
+---
+
+test_name: GET Beacon Firmware - 0002 - BeaconFirmwareV3Controller.cs (Stage Environment)
+
+marks:
+  - get
+  - skip
+
+stages:
+  - name: Get firmware version by beacon identifier.
+    skip: True
+    request:
+      url: https://stage.api.bluecats.com/beacons/{identifier}/firmware/{version}
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

@@ -1,0 +1,35 @@
+# test_DELETE_devices_0001.tavern.yaml
+
+---
+
+test_name: DELETE Devices Test - 0001 - DevicesV3Controller.cs (Local Environment) 
+
+marks:
+  - delete
+  - skip 
+
+stages:
+  - name: Confirm the posted device based on a Mac Address.
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205456
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      
+  - name: Delete the posted device based on a Mac Address.
+    request:
+      url: http://localhost:65069/devices/17700b5234373535534252777d205456
+      method: DELETE
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 204
+
+
+

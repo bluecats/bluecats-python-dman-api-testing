@@ -1,0 +1,22 @@
+# test_GET_devices_0002.tavernyaml
+
+---
+
+test_name: GET Devices Test - 0002 - DevicesV3Controller.cs (Stage Environment) 
+
+marks:
+  - get
+  - skip
+
+stages:
+  - name: Get a list of devices on a local server.
+    skip: True
+    request:
+      url: https://stage.api.bluecats.com/devices
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

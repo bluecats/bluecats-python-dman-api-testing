@@ -1,0 +1,120 @@
+# test_CRUD_subDevices_0001.tavern.yaml
+
+---
+test_name: CRUD SubDevices Test - 0001 - DevicesV3Controller.cs (Local Environment) 
+
+marks:
+  - crud
+  - skip
+  
+
+stages:
+  - name: Confirm the device does already exist based on a MAC Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+  - name: Post a single device based on a json object,.
+    request:
+      url: http://localhost:65069/devices
+      method: POST
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json:
+        macAddress: "57700b5234373535534252777d205451"
+        serialNumber: "57700b5234373535534252777d205451"
+        deviceModelVariant:
+          deviceModelID: "f01d1601-9da6-e2b1-b444-3e722fda4212"
+        rfModuleInfo:
+          rfModule:
+            id: "e187b5b1-c61d-e911-b2fb-0e1e0e0c0534"
+        team:
+          id: "bc300500-85a2-31b1-e74f-333236827887"
+        site:
+          id: "f5dd3101-f4a2-7d90-f34b-f4dcc0c3ca46"
+    response:
+      status_code: 201
+
+  - name: Post a list of SubDevices based on the a json object.
+    request:
+      url: http://localhost:65069/subdevices
+      method: POST
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json: !include POST_json_body.yaml
+    response:
+      status_code: 201
+
+  - name: Confirm the existing Device based on it's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+
+  - name: Confirm the existing SubDevices based on a Device's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451/subdevices
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      
+  - name: Delete the posted Device and SubDevices based on a Device's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: DELETE
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 204
+
+  - name: Confirm the deleted Device based on it's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+  - name: Confirm the deleted SubDevices based on a Device's Mac Address.
+    request:
+      url: http://localhost:65069/devices/57700b5234373535534252777d205451/subdevices
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+
+
+
+      
+
+
+      
+      

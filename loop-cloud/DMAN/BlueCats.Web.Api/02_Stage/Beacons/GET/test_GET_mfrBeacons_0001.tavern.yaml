@@ -1,0 +1,21 @@
+# test_GET_mfrBeacons_0001.tavern.yaml
+
+---
+
+test_name: GET Mfr Beacons Test - 0001 - MfrBeaconsV1Controller.cs (Stage Environment)
+
+marks:
+  - get
+
+stages:
+  - name: Get a mfr beacon by beacon identifier.
+    skip: False
+    request:
+      url: https://stage.api.bluecats.com/mfr/beacons/AC233F25AEE8
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

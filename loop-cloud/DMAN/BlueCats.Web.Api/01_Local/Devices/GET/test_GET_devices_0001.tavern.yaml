@@ -1,0 +1,22 @@
+# test_GET_devices_0001.tavern.yaml
+
+---
+
+test_name: GET Devices Test - 0001 - DevicesV3Controller.cs (Local Environment) 
+
+marks:
+  - get
+  - skip
+
+stages:
+  - name: Get a single device based on a Mac Address.
+    skip: True
+    request:
+      url: http://localhost:65069/devices/E4956E40DFB0
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200

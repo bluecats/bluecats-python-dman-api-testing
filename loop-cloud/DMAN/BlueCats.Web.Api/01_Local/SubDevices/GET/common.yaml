@@ -1,0 +1,12 @@
+# common.yaml
+---
+
+# Each file should have a name and description
+name: Common test information
+description: |
+  api key information for test user
+
+# Variables should just be a mapping of key: value pairs
+variables:
+  protocol: https
+  identifier1: AC233F25AEE8
