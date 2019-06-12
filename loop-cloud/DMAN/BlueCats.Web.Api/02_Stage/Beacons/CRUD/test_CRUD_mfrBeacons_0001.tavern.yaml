@@ -1,4 +1,5 @@
 # test_CRUD_mfrBeacons_0001.tavern.yaml
+# Nordic Firmware Test
 
 ---
 
@@ -6,17 +7,68 @@ test_name: CRUD Mfr Beacons Test - 0001 - MfrBeaconsV1Controller.cs (Stage Envir
 
 marks:
   - crud
-  - skip
+  # - skip
+
+includes:
+  - !include common.yaml
 
 stages:
-  - name: Post, Get & Delete a mfr beacon with a JSON object.
-    skip: True
+  - name: Get a mfr beacon by beacon identifier, should not exist, yet.
+    skip: False
     request:
-      url: https://stage.api.bluecats.com/mfr/beacons/{identifier}
+      url: https://stage.api.bluecats.com/mfr/beacons/{identifier1}
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404
+
+  - name: Post a mfr beacon with a JSON object based on a beacon identifier
+    skip: False
+    request:
+      url: https://stage.api.bluecats.com/mfr/beacons
       method: POST
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+      json: !include POST_json_body.yaml
+    response:
+      status_code: 201
+
+  - name: Get a mfr beacon by beacon identifier, should now exist.
+    skip: False
+    request:
+      url: https://stage.api.bluecats.com/mfr/beacons/{identifier1}
+      method: GET
       headers:
         content-type: application/json
         Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
         x-api-version: "3"
     response:
       status_code: 200
+
+  - name: Delete the new beacon by beacon identifier.
+    request:
+      url: https://stage.api.bluecats.com/beacons/{identifier1}
+      method: DELETE
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 204
+
+  - name: Get a mfr beacon by beacon identifier, should not exist anymore.
+    skip: False
+    request:
+      url: https://stage.api.bluecats.com/mfr/beacons/{identifier1}
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 404

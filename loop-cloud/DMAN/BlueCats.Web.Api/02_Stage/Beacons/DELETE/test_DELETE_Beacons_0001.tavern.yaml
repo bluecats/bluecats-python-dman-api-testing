@@ -5,20 +5,20 @@
 test_name: GET Mfr Beacons Test - 0001 - MfrBeaconsV1Controller.cs (Stage Environment)
 
 marks:
-  - get
+  - delete
   - skip
 
 includes:
   - !include common.yaml
 
 stages:
-  - name: Get a mfr beacon by beacon identifier.
+  - name: Delete a beacon by beacon identifier.
     request:
-      url: https://stage.api.bluecats.com/mfr/beacons/{identifier1}
-      method: GET
+      url: https://stage.api.bluecats.com/beacons/{identifier1}
+      method: DELETE
       headers:
         content-type: application/json
         Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
         x-api-version: "3"
     response:
-      status_code: 200
+      status_code: 204

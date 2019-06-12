@@ -6,17 +6,17 @@ test_name: POST Mfr Beacons Test - 0001 - MfrBeaconsV1Controller.cs (Stage Envir
 
 marks:
   - post
-  - skip
+  # - skip
 
 stages:
   - name: Post a mfr beacon with a JSON object based on a beacon identifier
-    skip: True
     request:
-      url: https://stage.api.bluecats.com/mfr/beacons/{identifier}
+      url: https://stage.api.bluecats.com/mfr/beacons
       method: POST
       headers:
         content-type: application/json
         Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
         x-api-version: "3"
+      json: !include POST_json_body.yaml
     response:
-      status_code: 200
+      status_code: 201

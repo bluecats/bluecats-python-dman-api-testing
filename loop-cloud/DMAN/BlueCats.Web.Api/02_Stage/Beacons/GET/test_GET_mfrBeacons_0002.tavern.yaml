@@ -1,0 +1,25 @@
+# test_GET_mfrBeacons_0002.tavern.yaml
+
+---
+
+test_name: GET Mfr Beacons Test - 0002 - MfrBeaconsV1Controller.cs (Stage Environment)
+
+marks:
+  - get
+  - skip
+
+includes:
+  - !include common.yaml
+
+stages:
+  - name: Get the latest firmware binary file from the beacon identifier.
+    request:
+      url: https://stage.api.bluecats.com/beacons/{identifier1}/firmware/latest/binary
+      method: GET
+      headers:
+        content-type: application/json
+        Authorization: "BlueCats {tavern.env_vars.SECRET_AUTH}"
+        x-api-version: "3"
+    response:
+      status_code: 200
+      

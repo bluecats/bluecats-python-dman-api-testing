@@ -1,0 +1,30 @@
+# json_body.yaml
+
+{
+  "channelBitmask": 7,
+  "pushButtonTransmitTimeout": 30,
+  "pushButtonMinimum": 3000,
+  "minAcceptGPSError": 20,
+  "maxTimeForGPS": 60,
+  "maxRetriesPerDay": 2,
+  "delayBtwRetries": 1,
+  "accelSleepDelay": 5,
+  "noMotionTimeout": 30,
+  "dataRate": 32,
+  "threshold": 16,
+  "duration": 0,
+  "accelRange": 0,
+  "teamID": "52afef9c-f609-e311-852e-22000a1c65ec",
+  "siteID": "950ec700-e7a2-c5a9-1844-6cc905e03dcb",
+  "runID": "05f8ee00-4daa-1c9a-0347-c97040a826b3",
+  "bluetoothAddress": "AC233F25AEE3",
+  "serialNumber": "AC233F25AEE3",
+  "eddystone": {
+    "instanceID": "AC233F25AEE3"
+  },
+  "major": "16167",
+  "minor": "44756",
+  "authKey": "2F5E9E79108C07BF4EB83F304A2C29BE",
+  "bulkKey": "1C221CDC81E7E700A1B77637F46EA949",
+  "macKey": "6E3C4EBE63BFCF1D8D35D09D711683A8"
+}
