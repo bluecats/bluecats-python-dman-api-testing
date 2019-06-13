@@ -6,7 +6,7 @@ test_name: GET Mfr Beacons Test - 0002 - MfrBeaconsV1Controller.cs (Stage Enviro
 
 marks:
   - get
-  - skip
+  # - skip
 
 includes:
   - !include common.yaml
@@ -14,7 +14,7 @@ includes:
 stages:
   - name: Get the latest firmware binary file from the beacon identifier.
     request:
-      url: https://stage.api.bluecats.com/beacons/{identifier1}/firmware/latest/binary
+      url: https://stage.api.bluecats.com/beacons/{identifier1}/firmware/latest/hex
       method: GET
       headers:
         content-type: application/json
