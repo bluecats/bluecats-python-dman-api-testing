@@ -14,7 +14,7 @@ includes:
 stages:
   - name: Get the latest firmware binary file from the beacon identifier.
     request:
-      url: https://stage.api.bluecats.com/beacons/{identifier1}/firmware/latest/hex
+      url: https://api-stage.apps.bluecats.com/beacons/{identifier1}/firmware/latest/hex
       method: GET
       headers:
         content-type: application/json

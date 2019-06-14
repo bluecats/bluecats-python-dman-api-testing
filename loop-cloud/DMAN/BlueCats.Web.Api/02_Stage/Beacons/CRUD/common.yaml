@@ -9,4 +9,4 @@ description: |
 # Variables should just be a mapping of key: value pairs
 variables:
   protocol: https
-  identifier1: AC233F25AEE6
+  identifier1: AC233F25AEE7

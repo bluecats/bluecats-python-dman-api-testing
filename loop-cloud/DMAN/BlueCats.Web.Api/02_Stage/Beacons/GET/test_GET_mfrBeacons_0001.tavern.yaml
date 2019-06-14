@@ -6,7 +6,7 @@ test_name: GET Mfr Beacons Test - 0001 - MfrBeaconsV1Controller.cs (Stage Enviro
 
 marks:
   - get
-  - skip
+  # - skip
 
 includes:
   - !include common.yaml
@@ -14,7 +14,7 @@ includes:
 stages:
   - name: Get a mfr beacon by beacon identifier.
     request:
-      url: https://stage.api.bluecats.com/mfr/beacons/{identifier1}
+      url: https://api-stage.apps.bluecats.com/mfr/beacons/{identifier1}
       method: GET
       headers:
         content-type: application/json
