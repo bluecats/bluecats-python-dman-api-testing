@@ -11,7 +11,7 @@ marks:
 stages:
   - name: Post a mfr beacon with a JSON object based on a beacon identifier
     request:
-      url: https://stage.api.bluecats.com/mfr/beacons
+      url: https://api-stage.apps.bluecats.com/mfr/beacons
       method: POST
       headers:
         content-type: application/json

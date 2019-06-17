@@ -10,7 +10,7 @@ marks:
 stages:
   - name: Confirm the device does already exist based on its MAC Address.
     request:
-      url: https://stage.api.bluecats.com/devices/57700b5234373535534252777d205451
+      url: https://api-stage.apps.bluecats.com/devices/57700b5234373535534252777d205451
       method: GET
       headers:
         content-type: application/json
@@ -21,7 +21,7 @@ stages:
 
   - name: Post a single device based upon a json object.
     request:
-      url: https://stage.api.bluecats.com/devices
+      url: https://api-stage.apps.bluecats.com/devices
       method: POST
       headers:
         content-type: application/json
@@ -44,7 +44,7 @@ stages:
 
   - name: Post a list of SubDevices based upon a json object.
     request:
-      url: https://stage.api.bluecats.com/subdevices
+      url: https://api-stage.apps.bluecats.com/subdevices
       method: POST
       headers:
         content-type: application/json

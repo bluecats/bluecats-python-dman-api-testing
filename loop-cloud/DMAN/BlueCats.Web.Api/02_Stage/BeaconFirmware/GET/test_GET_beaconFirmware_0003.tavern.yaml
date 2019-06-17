@@ -12,7 +12,7 @@ stages:
   - name: Get firmware hex file by beacon identifier.
     skip: True
     request:
-      url: https://stage.api.bluecats.com/beacons/{identifier}/firmware/{version}/Hex
+      url: https://api-stage.apps.bluecats.com/beacons/{identifier}/firmware/{version}/Hex
       method: GET
       headers:
         content-type: application/json

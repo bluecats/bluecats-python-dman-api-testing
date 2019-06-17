@@ -12,7 +12,7 @@ stages:
   - name: Get firmware version by beacon identifier.
     skip: True
     request:
-      url: https://stage.api.bluecats.com/beacons/{identifier}/firmware/{version}
+      url: https://api-stage.apps.bluecats.com/beacons/{identifier}/firmware/{version}
       method: GET
       headers:
         content-type: application/json

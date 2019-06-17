@@ -11,7 +11,7 @@ marks:
 stages:
   - name: Confirm the existing Device based on it's Mac Address.
     request:
-      url: https://stage.api.bluecats.com/devices/57700b5234373535534252777d205451
+      url: https://api-stage.apps.bluecats.com/devices/57700b5234373535534252777d205451
       method: GET
       headers:
         content-type: application/json
@@ -22,7 +22,7 @@ stages:
 
   - name: Confirm the existing SubDevices based on its Device's Mac Address.
     request:
-      url: https://stage.api.bluecats.com/devices/57700b5234373535534252777d205451/subdevices
+      url: https://api-stage.apps.bluecats.com/devices/57700b5234373535534252777d205451/subdevices
       method: GET
       headers:
         content-type: application/json
@@ -33,7 +33,7 @@ stages:
       
   - name: Delete the posted Device and SubDevices based on a Device's Mac Address.
     request:
-      url: https://stage.api.bluecats.com/devices/57700b5234373535534252777d205451
+      url: https://api-stage.apps.bluecats.com/devices/57700b5234373535534252777d205451
       method: DELETE
       headers:
         content-type: application/json
@@ -44,7 +44,7 @@ stages:
 
   - name: Confirm the deleted Device based on it's Mac Address.
     request:
-      url: https://stage.api.bluecats.com/devices/57700b5234373535534252777d205451
+      url: https://api-stage.apps.bluecats.com/devices/57700b5234373535534252777d205451
       method: GET
       headers:
         content-type: application/json
@@ -55,7 +55,7 @@ stages:
 
   - name: Confirm the deleted SubDevices based on its Device's Mac Address.
     request:
-      url: https://stage.api.bluecats.com/devices/57700b5234373535534252777d205451/subdevices
+      url: https://api-stage.apps.bluecats.com/devices/57700b5234373535534252777d205451/subdevices
       method: GET
       headers:
         content-type: application/json

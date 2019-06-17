@@ -12,7 +12,7 @@ stages:
   - name: Get a list of Subdevices from an existing Device.
     skip: True
     request:
-      url: https://stage.api.bluecats.com/devices/57700b5234373535534252777d205451/subdevices
+      url: https://api-stage.apps.bluecats.com/devices/57700b5234373535534252777d205451/subdevices
       method: GET
       headers:
         content-type: application/json

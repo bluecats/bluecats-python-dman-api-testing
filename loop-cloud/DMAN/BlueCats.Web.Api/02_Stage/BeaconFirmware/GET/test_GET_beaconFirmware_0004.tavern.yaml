@@ -12,7 +12,7 @@ stages:
   - name: Return firmware OTA file by beacon identifier.
     skip: True
     request:
-      url: https://stage.api.bluecats.com/beacons/{identifier}/firmware/{version}/OTA
+      url: https://api-stage.apps.bluecats.com/beacons/{identifier}/firmware/{version}/OTA
       method: GET
       headers:
         content-type: application/json

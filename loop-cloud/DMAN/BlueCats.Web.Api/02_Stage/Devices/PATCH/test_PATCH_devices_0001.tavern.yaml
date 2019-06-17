@@ -11,7 +11,7 @@ marks:
 stages:
   - name: Get the original device based on the device id.
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -22,7 +22,7 @@ stages:
 
   - name: Patch a single device based on the device id.
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: PATCH
       headers:
         content-type: application/json
@@ -38,7 +38,7 @@ stages:
 
   - name: Confirm the device patch worked based on the device id.
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -52,7 +52,7 @@ stages:
 
   - name: Restore the device with a patch to it original state based on the device id.
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: PATCH
       headers:
         content-type: application/json

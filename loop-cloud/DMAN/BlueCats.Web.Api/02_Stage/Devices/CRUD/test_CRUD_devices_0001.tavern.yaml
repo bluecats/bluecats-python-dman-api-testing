@@ -10,7 +10,7 @@ marks:
 stages:
   - name: GET Device - No Device Fail
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -21,7 +21,7 @@ stages:
 
   - name: POST Device - New Device Succeed
     request:
-      url: https://stage.api.bluecats.com/devices
+      url: https://api-stage.apps.bluecats.com/devices
       method: POST
       headers:
         content-type: application/json
@@ -44,7 +44,7 @@ stages:
 
   - name: GET Device - Verify New Device
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -70,7 +70,7 @@ stages:
 
   - name: PATCH Device - Updated New Device
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: PATCH
       headers:
         content-type: application/json
@@ -86,7 +86,7 @@ stages:
 
   - name: GET Device - Verify Updated Device
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -100,7 +100,7 @@ stages:
   
   - name: PATCH Device - Reverse Device Update
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: PATCH
       headers:
         content-type: application/json
@@ -116,7 +116,7 @@ stages:
 
   - name: GET Device - Verify Reversed Update
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
@@ -130,7 +130,7 @@ stages:
 
   - name: DELETE - Delete Patched Device
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: DELETE
       headers:
         content-type: application/json
@@ -141,7 +141,7 @@ stages:
 
   - name: GET Device - Verify Device Deletion
     request:
-      url: https://stage.api.bluecats.com/devices/17700b5234373535534252777d205454
+      url: https://api-stage.apps.bluecats.com/devices/17700b5234373535534252777d205454
       method: GET
       headers:
         content-type: application/json
